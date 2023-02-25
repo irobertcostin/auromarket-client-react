@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+
+
+  let [x, setX] = useState(25);
+  let test = () => {
+
+    setX((val) => {
+
+      return val * 2;
+    });
+
+
+    console.log(x);
+
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Ce mai {x} faci</p>
+      <button onClick={test}>click</button>
     </div>
   );
 }
