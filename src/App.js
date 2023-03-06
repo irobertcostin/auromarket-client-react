@@ -1,28 +1,20 @@
 import { useState } from "react";
 
+import Home from "./components/home/Home";
+
 function App() {
 
 
-  let [x, setX] = useState(25);
-  let test = () => {
 
-    setX((val) => {
-
-      return val * 2;
-    });
-
-
-    console.log(x);
-
-  }
 
 
   return (
-    <div>
-      <p>Ce mai {x} faci</p>
-      <button onClick={test}>click</button>
-    </div>
+  
+    <>
+    <Home/>
+    </>
   );
 }
+
 
 export default App;
