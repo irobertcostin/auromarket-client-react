@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Home from "./components/home/Home";
+import NewCar from "./components/NewCar/NewCar";
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
   return (
   
     <>
-    <Home/>
+    <NewCar/>
+    {/* <Home/> */}
     </>
   );
 }

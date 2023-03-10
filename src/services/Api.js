@@ -1,3 +1,9 @@
+import React from "react";
+import { Alert } from 'antd';
+
+
+
+
 export default class Data {
 
     api(path, method = 'GET', body = null) {
@@ -47,7 +53,24 @@ export default class Data {
         return data.json();
     }
 
+    async addNewCar(car){
+        try {
+            let response = await this.api('/new-car',"POST",car)
+            
+            if(response.status==201){
+                console.log("ok")
+            }else{
+                console.log(response);
+                console.log("failed")
+            }
+            
+        } catch (error) {
+            console.log(error)
+        }
+        
 
+
+    }
 
 
 
